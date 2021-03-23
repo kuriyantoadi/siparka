@@ -52,6 +52,14 @@
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Masukan email" required/>
 										</div>
 										<div class="mb-3">
+											<label class="form-label"><b>Nomor Handphone</label>
+											<input class="form-control form-control-lg" type="text" name="no_hp" placeholder="Masukan nomor handphone" required/>
+										</div>
+										<div class="mb-3">
+											<label class="form-label"><b>Alamat</label>
+											<input class="form-control form-control-lg" type="text" name="alamat" placeholder="Masukan alamat" required/>
+										</div>
+										<div class="mb-3">
 											<label class="form-label"><b>Kata Sandi</label>
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Masukan Kata Sandi" required/>
 										</div>

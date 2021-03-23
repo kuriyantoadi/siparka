@@ -5,8 +5,11 @@ $nim_mhs = $_POST['nim_mhs'];
 $nama_mhs = $_POST['nama_mhs'];
 $organisasi = $_POST['organisasi'];
 $email = $_POST['email'];
+$no_hp = $_POST['no_hp'];
+$alamat = $_POST['alamat'];
 $password = $_POST['password'];
 $konfirmasi = $_POST['konfirmasi'];
+$tgl = date('Y-m-d');
 
 if ($password != $konfirmasi) {
   // echo "konfirmasi password salah";
@@ -29,12 +32,12 @@ $enk = substr($enk_nim,6,10);
 echo $enk;
 
 $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_mahasiswa
-  Values('','$nim_mhs','$nama_mhs','$organisasi','$email',md5('$password'),'$enk','')");
+  Values('','$nim_mhs','$nama_mhs','$organisasi','$email',md5('$password'),'$no_hp','$alamat','$tgl','$enk','')");
 
 if ($cek_tambah) {
-    echo "tambah berhasil";
-    // header("location:daftar.php?pesan=daftar-berhasil");
+    // echo "tambah berhasil";
+    header("location:bukti-registrasi.php?nim_mhs=$nim_mhs");
 } else {
-    echo "tambah gagal";
-    // header("location:daftar.php?pesan=daftar-gagal");
+    // echo "tambah gagal";
+    header("location:daftar.php?pesan=daftar-gagal");
 }
