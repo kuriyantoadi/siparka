@@ -4,6 +4,7 @@ include 'koneksi.php';
 $nim_mhs = $_POST['nim_mhs'];
 $nama_mhs = $_POST['nama_mhs'];
 $organisasi = $_POST['organisasi'];
+$jurusan = $_POST['jurusan'];
 $email = $_POST['email'];
 $no_hp = $_POST['no_hp'];
 $alamat = $_POST['alamat'];

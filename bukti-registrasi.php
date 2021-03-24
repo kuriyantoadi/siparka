@@ -67,7 +67,7 @@
     </table>
     <p>Dengan ini saya mengajukan registrasi untuk melakukan peminjaman ruangan melalui website SIPARKA, dengan melampirkan :</p>
     <ul>
-      <li>Kartu Identitas (KTM)</li>
+      <li>Kartu Tanda Mahasiswa (KTM)</li>
     </ul>
     <p>Dengan pengajuan Registrasi ini dibuat. Atas perhatiannya diucapkan terima kasih.</p>
     <table style="margin-top: 30px; margin-left: 500px">

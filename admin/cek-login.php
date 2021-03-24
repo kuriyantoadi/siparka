@@ -6,18 +6,18 @@ session_start();
 // echo "salah php session";
 
 // menghubungkan dengan koneksi
-include 'koneksi.php';
+include '../koneksi.php';
 // echo "salah php inlucde";
 
 // menangkap data yang dikirim dari form
 // belum mengunakan MD5
-$nim_mhs = addslashes(trim($_POST['nim_mhs']));
+$username = addslashes(trim($_POST['username']));
 // $nisn = $_POST['nisn'];
 $password = md5($_POST['password']);
 // echo "salah php";
 
 // menyeleksi data admin dengan nisn dan password yang sesuai
-$data = mysqli_query($koneksi, "select * from tb_mahasiswa where nim_mhs='$nim_mhs' and password='$password'");
+$data = mysqli_query($koneksi, "select * from tb_user where username='$username' and password='$password'");
 // $data = mysqli_query($koneksi, "select * from login where nisn='$nisn' ");
 
 
@@ -29,11 +29,11 @@ $cek = mysqli_num_rows($data);
 if ($cek > 0) {
     $login = mysqli_fetch_assoc($data);
 
-    if ($login['status']=="aktif") {
-        $_SESSION['nim_mhs'] = $nim_mhs;
-        $_SESSION['status'] = "aktif";
+    if ($login['status']=="petugas") {
+        $_SESSION['username'] = $username;
+        $_SESSION['status'] = "petugas";
         // echo "cek";
-        header("location:mhs_dash.php?nim_mhs=$nim_mhs");
+        header("location:index.php");
     } else {
         // echo "salah1";
         header("location:login.php?pesan=belum_validasi");

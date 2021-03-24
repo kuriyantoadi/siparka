@@ -48,6 +48,21 @@
 											<input class="form-control form-control-lg" type="text" name="organisasi" placeholder="Masukan nama organisasi" required/>
 										</div>
 										<div class="mb-3">
+											<label class="form-label"><b>Jurusan</label>
+												<select class="form-control" name="jurusan" required>
+													<option value="">Pilih Jurusan</option>
+													<?php
+													include('koneksi.php');
+													$data = mysqli_query($koneksi, "SELECT nama_jurusan from tb_jurusan ");
+										      while ($d = mysqli_fetch_array($data)) {
+													 ?>
+
+													 <option value="<?= $d['nama_jurusan'] ?>"> <?= $d['nama_jurusan'] ?></option>
+
+												 <?php } ?>
+												</select>
+										</div>
+										<div class="mb-3">
 											<label class="form-label"><b>Email</label>
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Masukan email" required/>
 										</div>

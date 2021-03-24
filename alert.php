@@ -36,6 +36,24 @@ if (isset($_GET['pesan'])) {
           </div>
         </div>
         ";
-    }
+    } elseif ($_GET['pesan'] == "belum_login") {
+        echo "
+        <div class='alert alert-danger alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Maaf, anda belum login
+          </div>
+        </div>
+        ";
+  } elseif ($_GET['pesan'] == "logout") {
+      echo "
+      <div class='alert alert-primary alert-dismissible' role='alert'>
+        <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+        <div class='alert-message'>
+          Anda berhasil Logout
+        </div>
+      </div>
+      ";
+  }
 }
 ?>

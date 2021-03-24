@@ -10,11 +10,11 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="../img/icons/icon-48x48.png" />
 
 	<title>Login | Siparka</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="../css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -29,29 +29,27 @@
 							<div class="card-body">
 								<div class="m-sm-4">
 									<div class="text-center">
-										<img src="img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
+										<img src="../img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
 									</div>
 									<form action="cek-login.php" method="post">
 
-										<?php include('alert.php'); ?>
+										<?php include('../alert.php'); ?>
 
 										<div class="mb-3">
-											<label class="form-label"><b>NIM / Nomor Identitas</b></label>
-											<input class="form-control form-control-lg" type="text" name="nim_mhs" placeholder="Masukan NIM / nomor identitas" required/>
+											<label class="form-label"><b>Nama Akun</b></label>
+											<input class="form-control form-control-lg" type="text" name="username" placeholder="Masukan nama akun" required/>
 										</div>
 										<div class="mb-3">
 											<label class="form-label"><b>Kata Sandi</b></label>
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Masukan kata sandi" required/>
 
 										</div>
-									
+
 										<div class="text-center mt-3">
 											<button type="submit" class="btn btn-lg btn-primary" style="margin-top: 20px">Login</button>
 											<!-- <a class="btn btn-lg btn-success" href="#" style="margin-top: 20px">Daftar</a> -->
 										</div>
-										<small>
-											<a href="daftar.php">Mendaftar Akun Siparka</a>
-										</small>
+
 									</form>
 								</div>
 							</div>
@@ -63,7 +61,7 @@
 		</div>
 	</main>
 
-	<script src="js/app.js"></script>
+	<script src="../js/app.js"></script>
 
 </body>
 
