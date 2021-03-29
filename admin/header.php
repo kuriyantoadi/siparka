@@ -22,15 +22,7 @@ if ($_SESSION['status'] != "aihooCi2") {
 
 	<title>Siparka | Petugas</title>
 
-  <!-- <link rel="stylesheet" href="../dataTable/jquery.dataTables.min.js"> -->
-   <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-   <link href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet"> -->
-   <!-- <link rel="stylesheet" href="../dataTable/jquery.dataTables.min.js"> -->
-   <!-- <link href="../css/app.css" rel="stylesheet"> -->
-
 	<link href="../css/app.css" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -71,8 +63,8 @@ if ($_SESSION['status'] != "aihooCi2") {
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
-              <i class="align-middle" data-feather="book"></i> <span class="align-middle">Info Ruangan</span>
+						<a class="sidebar-link" href="ruangan.php">
+              <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Data Ruangan</span>
             </a>
 					</li>
 

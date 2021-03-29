@@ -104,7 +104,25 @@ if (isset($_GET['pesan'])) {
       <div class='alert alert-danger alert-dismissible' role='alert'>
         <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
         <div class='alert-message'>
-          Data Mahasiswa Berhail di <b>Hapus</b>
+          Data Mahasiswa Berhasil di <b>Hapus</b>
+        </div>
+      </div>
+        ";
+  } elseif ($_GET['pesan'] == "ruangan_tmbh") {
+      echo "
+      <div class='alert alert-primary alert-dismissible' role='alert'>
+        <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+        <div class='alert-message'>
+          Data Ruangan Berhasil di <b>Tambah</b>
+        </div>
+      </div>
+        ";
+  } elseif ($_GET['pesan'] == "ruangan_hps") {
+      echo "
+      <div class='alert alert-danger alert-dismissible' role='alert'>
+        <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+        <div class='alert-message'>
+          Data Ruangan Berhasil di <b>Hapus</b>
         </div>
       </div>
       ";
