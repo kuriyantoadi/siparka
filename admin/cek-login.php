@@ -1,4 +1,5 @@
 <?php
+
 // echo "salah php";
 // mengaktifkan session php
 
@@ -29,9 +30,9 @@ $cek = mysqli_num_rows($data);
 if ($cek > 0) {
     $login = mysqli_fetch_assoc($data);
 
-    if ($login['status']=="petugas") {
+    if ($login['status']=="aihooCi2") {
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = "petugas";
+        $_SESSION['status'] = "aihooCi2";
         // echo "cek";
         header("location:index.php");
     } else {

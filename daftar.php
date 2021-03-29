@@ -34,13 +34,13 @@
 							<div class="card-body">
 								<div class="m-sm-4">
 									<?php include('alert.php') ?>
-									<form action="daftar-update.php" method="post">
+									<form action="daftar-update.php" method="post" enctype="multipart/form-data">
 										<div class="mb-3">
 											<label class="form-label"><b>Nama</label>
 											<input class="form-control form-control-lg" type="text" name="nama_mhs" placeholder="Masukan nama lengkap" required/>
 										</div>
 										<div class="mb-3">
-											<label class="form-label"><b>Nomor Identitas</label>
+											<label class="form-label"><b>Nomor Kartu Tanda Mahasiswa</label>
 											<input class="form-control form-control-lg" type="text" name="nim_mhs" placeholder="Masukan nomor identitas / NIM" required />
 										</div>
 										<div class="mb-3">
@@ -82,8 +82,13 @@
 											<label class="form-label"><b>Konfirmasi Kata Sandi</label>
 											<input class="form-control form-control-lg" type="password" name="konfirmasi" placeholder="Konfirmasi Kata Sandi" required/>
 										</div>
+										<div class="mb-3">
+											<label class="form-label"><b>Upload Kartu Tanda Mahasiswa</label>
+											<input class="form-control" type="file" name="ktm" required/>
+											<div class="form-text">File berformat pdf dan maksimal ukuran 1 MB</div>
+										</div>
 										<div class="text-center mt-3">
-											<input type="submit" class="btn btn-primary btn" value="Daftar">
+											<input type="submit" class="btn btn-primary btn" value="Daftar" name="upload">
 										</div>
 									</form>
 									<small>

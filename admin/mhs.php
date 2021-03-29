@@ -10,7 +10,11 @@
 
             <h3 style="margin-bottom: 30px; text-align: center;">Data Mahasiswa</h3>
 
-            <table class="table table-bordered">
+            <?php
+            include('../alert.php');
+             ?>
+            <table class="table table-bordered table-hover" id="example">
+              <thead>
               <tr>
                 <th>
                   <center>No
@@ -31,6 +35,7 @@
                   <center>Opsi
                 </th>
               </tr>
+            </thead>
 
             <?php
             $no=1;
@@ -48,15 +53,20 @@
                 <?php
                 if (($d['status']) == 'aktif' ) {
                   ?>
-                  <span class="badge bg-success">sudah validasi</span>
+                  <span class="badge bg-success">Aktif</span>
+                <?php
+                }elseif (($d['status']) == 'tolak' ) {
+                ?>
+                  <span class="badge bg-danger">Tolak</span>
                 <?php  }else{ ?>
-                  <span class="badge bg-danger">belum validasi</span>
+                  <span class="badge bg-primary">belum validasi</span>
                 <?php } ?>
                 <td>
                   <center>
-                    <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
-                    <a href="#"><i class="align-middle" data-feather="trash"></i></a>
-                    <a href="#"><i class="align-middle" data-feather="search"></i></a>
+                    <a href="mhs-edit.php?nim_mhs=<?= $d['nim_mhs'] ?>"><i class="align-middle" data-feather="edit-2" alt="edit mahasiswa"></i></a>
+                    <a href="mhs-hapus.php?nim_mhs=<?= $d['nim_mhs'] ?>"
+                      onclick="return confirm('Anda yakin Hapus data Mahasiswa <?php echo $d['nama_mhs']; ?> ?')"><i class="align-middle" data-feather="trash"></i></a>
+                    <a href="mhs-lihat.php?nim_mhs=<?= $d['nim_mhs'] ?>"><i class="align-middle" data-feather="eye"></i></a>
 
                 </td>
               </tr>
@@ -65,9 +75,7 @@
             </table>
 
           </div>
-          <div class="card-body px-4">
-            <div id="world_map" style="height:350px;"></div>
-          </div>
+
         </div>
       </div>
 

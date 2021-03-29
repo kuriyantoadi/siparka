@@ -4,6 +4,7 @@ session_start();
 if ($_SESSION['status'] != "aktif") {
     header("location:login.php?pesan=belum_login");
 }
+$nim_mhs = $_SESSION['nim_mhs'];
  ?>
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@ if ($_SESSION['status'] != "aktif") {
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
+				<a class="sidebar-brand" href="">
           <span class="align-middle">Siparka</span>
         </a>
 
@@ -46,7 +47,7 @@ if ($_SESSION['status'] != "aktif") {
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="mhs_profil.php?nim_mhs=<?= $nim_mhs  ?>">
               <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil Saya</span>
             </a>
 					</li>
