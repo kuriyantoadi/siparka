@@ -73,6 +73,7 @@
                       }else{ ?>
                         <a type="button" href="mhs-val-tolak.php?nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-danger" style="margin-top: 20px">Konfirmasi Tolak</a>
                         <a type="button" href="mhs-val-ok.php?nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-success" style="margin-top: 20px">Konfirmasi OK</a>
+												<a type="button" href="../bukti-registrasi.php?nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-success" style="margin-top: 20px">Download Bukti Pendaftaran</a>
                       <?php }  // tampil button?>
 											<a type="button" href="mhs-edit.php?nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-warning" style="margin-top: 20px">Edit</a>
                     </div>
