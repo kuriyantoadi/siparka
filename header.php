@@ -65,7 +65,7 @@ $nim_mhs = $_SESSION['nim_mhs'];
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
+						<a class="sidebar-link" href="ruangan.php">
               <i class="align-middle" data-feather="book"></i> <span class="align-middle">Info Ruangan</span>
             </a>
 					</li>
