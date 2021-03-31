@@ -72,7 +72,7 @@
     <p>Dengan pengajuan Registrasi ini dibuat. Atas perhatiannya diucapkan terima kasih.</p>
     <table style="margin-top: 30px; margin-left: 500px">
       <tr>
-        <td><?= $d['alamat'] ?>, <?= $d['tgl']; ?></td>
+        <td>Serang, <?= $d['tgl']; ?></td>
       </tr>
       <tr>
         <td style="padding-top: 70px"><u><?= $d['nama_mhs']; ?></u></td>
