@@ -36,6 +36,11 @@ if ($_POST['upload']) {
     }
 }
 
+$ktm = mysqli_query($koneksi, "UPDATE tb_mahasiswa SET
+         ktm='ktm-$nim_mhs.pdf'
+        where nim_mhs='$nim_mhs'
+        ");
+
 if ($ktm) {
     // echo "tambah berhasil";
     header("location:mhs-lihat.php?pesan=ktm_ganti&nim_mhs=$nim_mhs");
