@@ -117,15 +117,25 @@ if (isset($_GET['pesan'])) {
         </div>
       </div>
         ";
-  } elseif ($_GET['pesan'] == "ruangan_hps") {
+  } elseif ($_GET['pesan'] == "ruangan_edit") {
       echo "
       <div class='alert alert-danger alert-dismissible' role='alert'>
         <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
         <div class='alert-message'>
-          Data Ruangan Berhasil di <b>Hapus</b>
+          Data Ruangan Berhasil di <b>Edit</b>
         </div>
       </div>
       ";
-  }
+
+    } elseif ($_GET['pesan'] == "ruangan_photo_hps") {
+        echo "
+        <div class='alert alert-primary alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Photo Ruangan Berhasil di <b>Hapus</b>
+          </div>
+        </div>
+        ";
+    }
 }
 ?>

@@ -28,21 +28,19 @@
 							        </div>
 
 											<div class="mb-3">
-												<label class="form-label"><b>Photo 1 Ruangan</label>
-                        <br><img src="../img/ruang/<?= $d['photo1'] ?>" class="img-thumbnail img-fluid" alt="photo belum tidak di input">
+												<label class="form-label"><b>Deskripsi Ruangan</label>
+												<input class="form-control form-control-lg" type="text" name="des_ruangan" value="<?= $d['des_ruangan'] ?>" readonly />
 											</div>
 
-                      <div class="mb-3">
-                        <label class="form-label"><b>Photo 2 Ruangan</label>
-                        <br><img src="../img/ruang/<?= $d['photo2'] ?>" class="img-thumbnail img-fluid" alt="photo belum tidak di input">
-                      </div>
+											<div class="mb-3">
+												<label class="form-label"><b>Kondisi</label>
+												<input class="form-control form-control-lg" type="text" name="kondisi" value="<?= $d['kondisi'] ?>" readonly />
+											</div>
 
-                      <div class="mb-3">
-                        <label class="form-label"><b>Photo 3 Ruangan</label>
-                        <br><img src="../img/ruang/<?= $d['photo3'] ?>" class="img-thumbnail img-fluid" alt="photo belum tidak di input">
-                      </div>
-
-
+											<div class="mb-3">
+												<label class="form-label"><b>Photo Ruangan</label>
+                        <br><img src="../img/ruang/<?= $d['photo_ruangan'] ?>" class="img-thumbnail img-fluid" alt="photo belum tidak di input">
+											</div>
 
                   <?php } //tampil data mahasiswa ?>
 							      </form>

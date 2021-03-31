@@ -21,21 +21,14 @@
 											 <input class="form-control form-control-lg" type="text" name="kode_ruangan"  required/>
 										 </div>
 
-                      <div class="mb-3">
-                        <label class="form-label"><b>Photo 1<br></label>
-                        <input class="form-control" type="file" name="photo1" required/>
-                        <div class="form-text">File berformat jpg, jpeg atau png dan maksimal ukuran 2 MB</div>
-                      </div>
+										 <div class="mb-3">
+									 		<label class="form-label"><b>Deskripsi Ruangan<br></label>
+            					<textarea class = "form-control" rows = "3" placeholder = "" name="des_ruangan"></textarea>
+										</div>
 
                       <div class="mb-3">
-                        <label class="form-label"><b>Photo 2<br></label>
-                        <input class="form-control" type="file" name="photo2" />
-                        <div class="form-text">File berformat jpg, jpeg atau png dan maksimal ukuran 2 MB</div>
-                      </div>
-
-                      <div class="mb-3">
-                        <label class="form-label"><b>Photo 3<br></label>
-                        <input class="form-control" type="file" name="photo3" />
+                        <label class="form-label"><b>Photo Ruangan<br></label>
+                        <input class="form-control" type="file" name="photo_ruangan" required/>
                         <div class="form-text">File berformat jpg, jpeg atau png dan maksimal ukuran 2 MB</div>
                       </div>
 

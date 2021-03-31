@@ -1,12 +1,14 @@
 <?php
 include '../koneksi.php';
 
+$id_ruangan = $_POST['id_ruangan'];
 $nama_ruangan = $_POST['nama_ruangan'];
 $kode_ruangan = $_POST['kode_ruangan'];
 $kondisi = $_POST['kondisi'];
-$des_ruangan = $_POST['des_ruangan'];
+// $photo_ruangan = $_POST['photo_ruangan'];
 
-// photo_ruangan
+
+// photo Ruangan
 
   if ($_POST['upload']) {
       $ekstensi_diperbolehkan = array('jpg','png','jpeg');
@@ -17,7 +19,7 @@ $des_ruangan = $_POST['des_ruangan'];
       $file_tmp = $_FILES['photo_ruangan']['tmp_name'];
       if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
           if ($ukuran < 2000000) {
-            move_uploaded_file($file_tmp, '../img/ruang/' .'ruangan-'.$kode_ruangan.'.png');
+              move_uploaded_file($file_tmp, '../img/ruang/' .'ruangan-'.$kode_ruangan.'.png');
           } else {
               echo 'Photo 1';
               echo 'UKURAN FILE TERLALU BESAR';
@@ -33,13 +35,22 @@ $des_ruangan = $_POST['des_ruangan'];
   }
 
 
-$cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_ruangan
-  Values('','$nama_ruangan','$kode_ruangan','$des_ruangan','$kondisi','ruangan-$kode_ruangan.png' )");
 
-if ($cek_tambah) {
+$edit_ruangan = mysqli_query($koneksi, "UPDATE tb_ruangan SET
+         nama_ruangan='$nama_ruangan',
+         kode_ruangan='$kode_ruangan',
+         photo_ruangan='ruangan-$kode_ruangan.png',
+         kondisi='$kondisi'
+        where id_ruangan='$id_ruangan'
+        ");
+
+
+
+if ($edit_ruangan) {
     // echo "tambah berhasil";
-    header("location:ruangan.php?pesan=ruangan_tmbh");
+    header("location:ruangan.php?pesan=ruangan_edit");
 } else {
     echo "tambah gagal";
     // header("location:daftar.php?pesan=daftar-gagal");
 }
+?>

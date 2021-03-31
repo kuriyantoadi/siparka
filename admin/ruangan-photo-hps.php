@@ -8,18 +8,22 @@ session_start();
 if ($_SESSION['status'] != "aihooCi2") {
     header("location:login.php?pesan=belum_login");
 }
-    $id_ruangan = $_GET['id_ruangan'];
-    $id_photo = $_GET['id_photo'];
+    $id_ruangan = $_GET['id_ruangan']; //1
+    $photo_ruangan = $_GET['photo_ruangan'];
+    // $kode_ruangan = $_GET['kode_ruangan'];
 
-    unlink("../img/ruang/ruangan-$id_photo-$nim_mhs.pdf");
+    unlink("../img/ruang/$photo_ruangan");
 
     // menghapus data dari database
-    $cek_hapus = mysqli_query($koneksi, "delete from tb_mahasiswa where nim_mhs='$nim_mhs' ");
+    $photo_hps = mysqli_query($koneksi, "UPDATE tb_ruangan SET
+            photo_ruangan=''
+            where id_ruangan='$id_ruangan'
+            ");
 
     // mengalihkan halaman kembali ke index.php
-    if($cek_hapus) {
+    if($photo_hps) {
       // echo "hapus berhasil";
-      header("location:mhs.php?pesan=mhs_hapus");
+      header("location:ruangan-edit.php?pesan=ruangan_photo_hps&id_ruangan=$id_ruangan");
     }else{
       echo "hapus gagal";
       // header("location:mhs.php?pesan=hapus-gagal");
