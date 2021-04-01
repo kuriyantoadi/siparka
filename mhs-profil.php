@@ -12,11 +12,16 @@
 
 										<form action="daftar-update.php" method="post" enctype="multipart/form-data">
 							        <?php
+											include('alert.php');
 							        include('koneksi.php');
 							        $nim_mhs = $_GET['nim_mhs'];
 							        $data = mysqli_query($koneksi, "SELECT * from tb_mahasiswa WHERE nim_mhs=$nim_mhs ");
 							        while ($d = mysqli_fetch_array($data)) {
 							         ?>
+											 <div class="mb-3">
+												 <a href="mhs-pass.php?nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-danger" >Ganti Password</a>
+											 </div>
+
 							        <div class="mb-3">
 							          <label class="form-label"><b>Nama</label>
 							          <input class="form-control form-control-lg" type="text" name="nama_mhs" value="<?= $d['nama_mhs'] ?>" readonly/>
@@ -58,8 +63,11 @@
 											</div>
 
 							        <div class="mb-3">
-												<embed src="img/ktm/<?= $d['ktm']; ?>" type="application/pdf" width="70%" height="500px">
-							        </div>
+												<?= $d['ktm'] ?>
+												<!-- <embed src="img/ktm/<?= $d['ktm']; ?>" type="application/pdf" width="70%" height="500px"> -->
+												<br><img src="img/ktm/<?= $d['ktm'] ?>" class="img-thumbnail img-fluid" alt="KTM belum di upload">
+
+									    </div>
 
 							      <?php } ?>
 							      </form>

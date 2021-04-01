@@ -33,7 +33,7 @@ if ($cek > 0) {
         $_SESSION['nim_mhs'] = $nim_mhs;
         $_SESSION['status'] = "aktif";
         // echo "cek";
-        header("location:mhs_dash.php?nim_mhs=$nim_mhs");
+        header("location:mhs-dash.php?nim_mhs=$nim_mhs");
     } else {
         // echo "salah1";
         header("location:login.php?pesan=belum_validasi");

@@ -60,10 +60,10 @@
                 <?php } ?>
                 <td>
                   <center>
-                    <a href="ruangan-edit.php?id_ruangan=<?= $d['id_ruangan'] ?>"><i class="align-middle" data-feather="edit-2" alt="edit mahasiswa"></i></a>
-                    <a href="ruangan-hapus.php?id_ruangan=<?= $d['id_ruangan'] ?>&kode_ruangan=<?= $d['kode_ruangan'] ?>"
-                      onclick="return confirm('Anda yakin Hapus data Ruangan <?php echo $d['nama_ruangan']; ?> ?')"><i class="align-middle" data-feather="trash"></i></a>
-                    <a href="ruangan-lihat.php?id_ruangan=<?= $d['id_ruangan'] ?>"><i class="align-middle" data-feather="eye"></i></a>
+                    <a class="btn btn-sm btn-danger" href="ruangan-hapus.php?id_ruangan=<?= $d['id_ruangan'] ?>&kode_ruangan=<?= $d['kode_ruangan'] ?>"
+                      onclick="return confirm('Anda yakin Hapus data Ruangan <?php echo $d['nama_ruangan']; ?> ?')">Hapus</a>
+                    <a class="btn btn-sm btn-info" href="ruangan-edit.php?id_ruangan=<?= $d['id_ruangan'] ?>">Edit</a>
+                    <a class="btn btn-sm btn-success" href="ruangan-lihat.php?id_ruangan=<?= $d['id_ruangan'] ?>">Lihat</a>
 
                 </td>
               </tr>

@@ -8,10 +8,10 @@ if ($_SESSION['status'] != "aihooCi2") {
 }
 
 $nim_mhs = $_POST['nim_mhs'];
-unlink("../img/ktm/ktm-$nim_mhs.pdf");
+unlink("../img/ktm/ktm-$nim_mhs.png");
 
 if ($_POST['upload']) {
-    $ekstensi_diperbolehkan = array('pdf','pdf','pdf');
+    $ekstensi_diperbolehkan = array('jpg','jpeg','png');
     // $waktu = date('d-m-Y');
     // $ktm_up = "ktm";
     $ktm = $_FILES['ktm']['name'];
@@ -21,14 +21,14 @@ if ($_POST['upload']) {
     $file_tmp = $_FILES['ktm']['tmp_name'];
     if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
         if ($ukuran < 1000000) {
-            move_uploaded_file($file_tmp, '../img/ktm/' .'ktm-'. $nim_mhs . '.pdf');
+            move_uploaded_file($file_tmp, '../img/ktm/' .'ktm-'. $nim_mhs . '.png');
         } else {
             echo 'ktm';
             echo 'UKURAN FILE TERLALU BESAR';
             exit;
         }
     } else {
-        echo 'File ktm tidak .jpg';
+        echo 'File ktm tidak jpg jpeg png';
         echo "<br>";
         echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
         // header("location:gagal-upload.php");
@@ -37,7 +37,7 @@ if ($_POST['upload']) {
 }
 
 $ktm = mysqli_query($koneksi, "UPDATE tb_mahasiswa SET
-         ktm='ktm-$nim_mhs.pdf'
+         ktm='ktm-$nim_mhs.png'
         where nim_mhs='$nim_mhs'
         ");
 

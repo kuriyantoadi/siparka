@@ -3,12 +3,18 @@ include '../koneksi.php';
 
 $id_ruangan = $_POST['id_ruangan'];
 $nama_ruangan = $_POST['nama_ruangan'];
-$kode_ruangan = $_POST['kode_ruangan'];
+// $kode_ruangan = $_POST['kode_ruangan'];
 $kondisi = $_POST['kondisi'];
+$des_ruangan = $_POST['des_ruangan'];
 // $photo_ruangan = $_POST['photo_ruangan'];
 
 
 // photo Ruangan
+// $photo_ruangan = $_POST['photo_ruangan'];
+if (empty($_POST['photo_ruangan'])){
+
+}else{
+
 
   if ($_POST['upload']) {
       $ekstensi_diperbolehkan = array('jpg','png','jpeg');
@@ -33,12 +39,13 @@ $kondisi = $_POST['kondisi'];
           exit;
       }
   }
-
+}
 
 
 $edit_ruangan = mysqli_query($koneksi, "UPDATE tb_ruangan SET
          nama_ruangan='$nama_ruangan',
-         kode_ruangan='$kode_ruangan',
+         -- kode_ruangan='$kode_ruangan',
+         des_ruangan='$des_ruangan',
          photo_ruangan='ruangan-$kode_ruangan.png',
          kondisi='$kondisi'
         where id_ruangan='$id_ruangan'

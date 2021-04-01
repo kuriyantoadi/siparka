@@ -18,15 +18,16 @@
 							        $data = mysqli_query($koneksi, "SELECT * from tb_ruangan WHERE id_ruangan=$id_ruangan ");
 							        while ($d = mysqli_fetch_array($data)) {
 							         ?>
+											 <div class="mb-3">
+										 		<label class="form-label"><b>Kode Ruangan</label>
+										 		<input class="form-control form-control-lg" type="text" name="kode_ruangan" value="<?= $d['kode_ruangan'] ?>" readonly />
+										 	</div>
+
 							        <div class="mb-3">
 							          <label class="form-label"><b>Nama Ruangan</label>
 							          <input class="form-control form-control-lg" type="text" name="nama_ruangan" value="<?= $d['nama_ruangan'] ?>" required/>
 												<input class="form-control form-control-lg" type="hidden" name="id_ruangan" value="<?= $d['id_ruangan'] ?>" required/>
 										  </div>
-							        <div class="mb-3">
-							          <label class="form-label"><b>Kode Ruangan</label>
-							          <input class="form-control form-control-lg" type="text" name="kode_ruangan" value="<?= $d['kode_ruangan'] ?>" required />
-							        </div>
 
 											<div class="mb-3">
 										 	<label class="form-label"><b>Deskripsi Ruangan<br></label>

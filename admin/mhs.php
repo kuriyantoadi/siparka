@@ -63,10 +63,10 @@
                 <?php } ?>
                 <td>
                   <center>
-                    <a href="mhs-edit.php?nim_mhs=<?= $d['nim_mhs'] ?>"><i class="align-middle" data-feather="edit-2" alt="edit mahasiswa"></i></a>
-                    <a href="mhs-hapus.php?nim_mhs=<?= $d['nim_mhs'] ?>"
-                      onclick="return confirm('Anda yakin Hapus data Mahasiswa <?php echo $d['nama_mhs']; ?> ?')"><i class="align-middle" data-feather="trash"></i></a>
-                    <a href="mhs-lihat.php?nim_mhs=<?= $d['nim_mhs'] ?>"><i class="align-middle" data-feather="eye"></i></a>
+                    <a href="mhs-hapus.php?nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-sm btn-danger"
+                      onclick="return confirm('Anda yakin Hapus data Mahasiswa <?php echo $d['nama_mhs']; ?> ?')">Hapus</a>
+                    <a class="btn btn-sm btn-info" href="mhs-edit.php?nim_mhs=<?= $d['nim_mhs'] ?>">Edit</a>
+                    <a class="btn btn-sm btn-success" href="mhs-lihat.php?nim_mhs=<?= $d['nim_mhs'] ?>">Lihat</a>
 
                 </td>
               </tr>

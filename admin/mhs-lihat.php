@@ -64,8 +64,10 @@
 											</div>
 
 							        <div class="mb-3">
-												<embed src="../img/ktm/<?= $d['ktm']; ?>" type="application/pdf" width="70%" height="500px">
-							        </div>
+												<!-- <embed src="../img/ktm/<?= $d['ktm']; ?>" type="application/pdf" width="70%" height="500px"> -->
+												<br><img src="../img/ktm/<?= $d['ktm'] ?>" class="img-thumbnail img-fluid" alt="KTM belum tidak di input">
+
+										  </div>
 
                     <div class="mb-3"><center>
                       <?php

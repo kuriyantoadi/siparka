@@ -65,7 +65,7 @@
                 <td>
                   <center>
                   <a href="ruangan-lihat.php?id_ruangan=<?= $d['id_ruangan'] ?>" class="btn btn-sm btn-primary">Lihat</a>
-                  <a href="ruangan-pinjam.php" class="btn btn-sm btn-success">Pinjam</a>
+                  <a href="ruangan-pinjam.php?id_ruangan=<?= $d['id_ruangan'] ?>&nim_mhs=<?= $nim_mhs ?>" class="btn btn-sm btn-success">Pinjam</a>
                 </td>
               </tr>
 

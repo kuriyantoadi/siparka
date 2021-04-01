@@ -41,13 +41,13 @@ $nim_mhs = $_SESSION['nim_mhs'];
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="mhs_dash.php">
+						<a class="sidebar-link" href="mhs-dash.php">
               <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             </a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="mhs_profil.php?nim_mhs=<?= $nim_mhs  ?>">
+						<a class="sidebar-link" href="mhs-profil.php?nim_mhs=<?= $nim_mhs  ?>">
               <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil Saya</span>
             </a>
 					</li>
