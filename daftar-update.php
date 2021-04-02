@@ -58,7 +58,7 @@ if($cek_nim){
 $enk_nim = md5($nim_mhs);
 $enk = substr($enk_nim,6,10);
 
-echo $enk;
+// echo $enk;
 
 $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_mahasiswa
   Values('','$nim_mhs','$nama_mhs','$organisasi','$jurusan','$email',md5('$password'),'$no_hp','$alamat','$tgl','ktm-$nim_mhs.png','$enk','Belum dikonfirmasi')");

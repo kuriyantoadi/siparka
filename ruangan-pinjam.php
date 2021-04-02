@@ -12,7 +12,7 @@
               <center>Pinjam Ruangan
             </h3>
 
-            <form action="daftar-update.php" method="post" enctype="multipart/form-data">
+            <form action="ruangan-pinjam-up.php" method="post" enctype="multipart/form-data">
               <?php
                       include('koneksi.php');
                       include('alert.php');
@@ -41,6 +41,7 @@
 
               <div class="mb-3">
                 <label class="form-label"><b>Kode Ruangan</label>
+                <input class="form-control form-control-lg" type="hidden" name="id_ruangan" value="<?= $d['id_ruangan'] ?>" readonly />
                 <input class="form-control form-control-lg" type="text" name="kode_ruangan" value="<?= $d['kode_ruangan'] ?>" readonly />
               </div>
 
@@ -52,7 +53,7 @@
 
               <div class="mb-3">
                 <label class="form-label"><b>Tanggal Peminjaman</label>
-                <input class="form-control form-control-lg" type="date" name="tgl_peminjaman" required />
+                <input type="text" name="tgl_peminjaman" class="form-control datepicker" placeholder="Tanggal Peminjaman" required />
               </div>
 
               <div class="mb-3">
@@ -68,7 +69,7 @@
 
               <div class="mb-3">
                 <label class="form-label"><b>Tanggal Pengembalian</label>
-                <input class="form-control form-control-lg" type="date" name="tgl_kembali" required />
+                  <input type="text" name="tgl_kembali" class="form-control datepicker" placeholder="Tanggal Peminjaman" required />
               </div>
 
               <div class="mb-3">

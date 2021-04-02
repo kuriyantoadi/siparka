@@ -136,6 +136,24 @@ if (isset($_GET['pesan'])) {
           </div>
         </div>
         ";
+  } elseif ($_GET['pesan'] == "pinjam_error_tgl_salah") {
+      echo "
+      <div class='alert alert-warning alert-dismissible' role='alert'>
+        <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+        <div class='alert-message'>
+          Tanggal Pinjam dan Kembali tidak sesuai (mungkin, lebih awal tanggal kembali)
+        </div>
+      </div>
+      ";
+    } elseif ($_GET['pesan'] == "pinjam_tgl_sama_db") {
+        echo "
+        <div class='alert alert-warning alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Tanggal Pinjam atau Tanggal kembali sudah pernah diajukan mahasiswa lain
+          </div>
+        </div>
+        ";
     }
 }
 ?>
