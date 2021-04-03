@@ -54,7 +54,7 @@
                   ?>
                   <span class="badge bg-success">Baik</span>
                 <?php
-              }elseif (($d['kondisi']) == 'tidak baik' ) {
+                }elseif (($d['kondisi']) == 'tidak baik' ) {
                 ?>
                   <span class="badge bg-danger">Tidak Baik</span>
                 <?php  }else{ ?>

@@ -54,14 +54,8 @@ $nim_mhs = $_SESSION['nim_mhs'];
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-settings.html">
+						<a class="sidebar-link" href="pengajuan.php">
               <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Peminjaman</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-invoice.html">
-              <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Data Peminjaman</span>
             </a>
 					</li>
 

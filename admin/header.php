@@ -22,7 +22,10 @@ if ($_SESSION['status'] != "aihooCi2") {
 
 	<title>Siparka | Petugas</title>
 
-	<link href="../css/app.css" rel="stylesheet">
+  <link href="../datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link href="../css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -51,14 +54,8 @@ if ($_SESSION['status'] != "aihooCi2") {
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-settings.html">
-              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Peminjaman</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-invoice.html">
-              <i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Data Peminjaman</span>
+						<a class="sidebar-link" href="peminjaman.php">
+              <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Data Peminjaman</span>
             </a>
 					</li>
 

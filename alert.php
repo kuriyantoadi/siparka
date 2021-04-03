@@ -163,6 +163,33 @@ if (isset($_GET['pesan'])) {
           </div>
         </div>
         ";
+    } elseif ($_GET['pesan'] == "pinjam_kritik_saran") {
+        echo "
+        <div class='alert alert-success alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Penyampain Kritik dan Saran berhasil
+          </div>
+        </div>
+        ";
+    } elseif ($_GET['pesan'] == "peminjaman_diizinkan") {
+        echo "
+        <div class='alert alert-success alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Pemberian Izin peminjaman ruangan berhasil
+          </div>
+        </div>
+          ";
+    } elseif ($_GET['pesan'] == "peminjaman_ditolak") {
+        echo "
+        <div class='alert alert-warning alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Konfirmasi Tolak Peminjaman Ruangan Berhasil
+          </div>
+        </div>
+        ";
     }
 }
 ?>

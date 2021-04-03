@@ -3,7 +3,7 @@ include '../koneksi.php';
 
 $id_ruangan = $_POST['id_ruangan'];
 $nama_ruangan = $_POST['nama_ruangan'];
-// $kode_ruangan = $_POST['kode_ruangan'];
+$kode_ruangan = $_POST['kode_ruangan'];
 $kondisi = $_POST['kondisi'];
 $des_ruangan = $_POST['des_ruangan'];
 // $photo_ruangan = $_POST['photo_ruangan'];
@@ -11,10 +11,11 @@ $des_ruangan = $_POST['des_ruangan'];
 
 // photo Ruangan
 // $photo_ruangan = $_POST['photo_ruangan'];
-if (empty($_POST['photo_ruangan'])){
-
+if (!empty($_POST['photo_ruangan'])){
+  echo "photo ruangan kosong";
 }else{
 
+  echo "photo ruangan ada";
 
   if ($_POST['upload']) {
       $ekstensi_diperbolehkan = array('jpg','png','jpeg');
@@ -29,14 +30,14 @@ if (empty($_POST['photo_ruangan'])){
           } else {
               echo 'Photo 1';
               echo 'UKURAN FILE TERLALU BESAR';
-              exit;
+              // exit;
           }
       } else {
           echo 'File ruangan tidak .jpg ';
           echo "<br>";
           echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
           // header("location:gagal-upload.php");
-          exit;
+          // exit;
       }
   }
 }

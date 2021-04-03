@@ -34,11 +34,22 @@
 	<script src="../dataTable/jquery.dataTables.min.js"></script>
 	<script src="../dataTable/dataTables.bootstrap4.min.js"></script>
 
+	<script src="../datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="../datepicker/js/custom.js"></script>
 
 	<script>
 	$(document).ready(function() {
 		$('#example').DataTable();
 	});
+
+	$(document).ready(function() {
+		setDatePicker()
+		setDateRangePicker(".startdate", ".enddate")
+		setMonthPicker()
+		setYearPicker()
+		setYearRangePicker(".startyear", ".endyear")
+	})
+
 
 	$(document).ready(function() {
 		$("#domainsTable").tablesorter({
