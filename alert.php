@@ -154,6 +154,15 @@ if (isset($_GET['pesan'])) {
           </div>
         </div>
         ";
+    } elseif ($_GET['pesan'] == "pinjam_berhasil") {
+        echo "
+        <div class='alert alert-warning alert-dismissible' role='alert'>
+          <button type='button' class='btn-close' data-dismiss='alert' aria-label='Close'></button>
+          <div class='alert-message'>
+            Proses peminjaman berhasil
+          </div>
+        </div>
+        ";
     }
 }
 ?>

@@ -14,8 +14,8 @@ $des_keg = $_POST['des_keg'];
 
 
 if ($tgl_peminjaman > $tgl_kembali) {
-  echo "Tanggal kembali dan Tanggal Pinjam tidak sesuai";
-  echo "<br>";
+  // echo "Tanggal kembali dan Tanggal Pinjam tidak sesuai";
+  // echo "<br>";
   header("location:ruangan-pinjam.php?pesan=pinjam_error_tgl_salah&nim_mhs=$nim_mhs&id_ruangan=$id_ruangan");
   exit;
 }
@@ -37,6 +37,7 @@ if(!empty($tgl_pnjm1)){
 $data2  = mysqli_query($koneksi, "SELECT * from tb_pinjam where (kode_ruangan=$kode_ruangan) and (tgl_kembali between '$tgl_peminjaman' and '$tgl_kembali')");
 while ($d = mysqli_fetch_array($data2)) {
  $tgl_pnjm2 =  $d['tgl_kembali'];
+ // echo $tgl_pnjm2;
 }
 
 if(!empty($tgl_pnjm2)){
@@ -89,7 +90,7 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_pinjam
 
 if ($cek_tambah) {
     echo "tambah berhasil";
-    header("location:ruangan-pinjam.php?pesan=pinjam_tgl_sama_db&nim_mhs=$nim_mhs&id_ruangan=$id_ruangan");
+    // header("location:ruangan-pinjam.php?pesan=pinjam_berhasil&nim_mhs=$nim_mhs&id_ruangan=$id_ruangan");
 } else {
     echo "tambah gagal";
     // header("location:daftar.php?pesan=daftar-gagal");
