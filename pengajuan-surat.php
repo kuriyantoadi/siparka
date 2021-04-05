@@ -85,7 +85,7 @@
         <td>: <?= $d['tgl_kembali'] ?>, <?= $d['wkt_kembali'] ?> WIB</td>
       </tr>
     </table>
-  <?php } ?>
+
   </div>
   <br>
 <table>
@@ -97,7 +97,7 @@
 </table>
 <table style="margin-top: 30px; margin-left: 450px">
   <tr>
-    <td><center>Serang, <?= $d['tgl']; ?></td>
+    <td><center>Serang, <?= $d['tgl_pengajuan']; ?></td>
   </tr>
   <tr>
     <td style="padding-top: 70px"></td>
@@ -106,6 +106,7 @@
     <td><center>Petugas Kasubbag. Umum dan Perlengkapan</td>
   </tr>
 </table>
+  <?php } ?>
   <script>
     window.print();
   </script>

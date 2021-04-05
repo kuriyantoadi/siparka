@@ -11,7 +11,7 @@ $konfirmasi = mysqli_query($koneksi, "UPDATE tb_pinjam SET
 
 if ($konfirmasi) {
     // echo "tambah berhasil";
-    header("location:peminjaman-lihat.php?pesan=peminjaman_diizinkan&id_pinjam=$id_pinjam");
+    header("location:peminjaman.php?pesan=peminjaman_diizinkan&id_pinjam=$id_pinjam");
 } else {
     echo "tambah gagal";
     // header("location:daftar.php?pesan=daftar-gagal");

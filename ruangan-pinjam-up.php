@@ -81,7 +81,7 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_pinjam
     '$tgl_peminjaman',
     '$wkt_peminjaman',
     '$tgl_kembali',
-    '$tgl_kembali',
+    '$wkt_kembali',
     '$des_keg',
     'surat_izin-$nim_mhs-$tgl_peminjaman.png',
     '',

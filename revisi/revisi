@@ -8,7 +8,24 @@
 1. mahasiswa pinjam => ok
 
 02 April 2021
-1. Mahasiswa data peminjaman => proses
-2. Mahasiswa Downloas surat peminjaman => proses
-3. Mahasiswa Kritik dan saran => proses
-4. Mahasiswa Tombol selesai => proses
+1. Mahasiswa data peminjaman => ok
+2. Mahasiswa Downloas surat peminjaman => ok
+3. Mahasiswa Kritik dan saran => ok
+4. Mahasiswa Tombol selesai => ok
+
+05 April 2021
+Petugas
+1. Dashboard tampil yang di diizinkan saja => ok
+2. Data Peminjaman, => ok
+  tolak = merah
+  selesai = biru -> info
+  diizinkan = hijau
+  menunggu = biru -> primary
+3. Data peminjaman, diizinkan notif tampil di dalam tabel (jika selesai) => ok
+4. Data Peminjaman, Riwayat ke komentar => ok
+
+Mahasiswa
+1. Dashboard mahasiswa => ok
+2. Data peminjaman, Surat peminjaman ruangan => ok
+3. Data peminjaman, selesai (lihat dan selesai) hilang => ok
+4. Tanggal surat pengajuan => ok

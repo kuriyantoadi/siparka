@@ -8,7 +8,7 @@
         <div class="card flex-fill w-100">
           <div class="card-header">
 
-            <h3 style="margin-bottom: 30px; text-align: center;">Data Peminjaman</h3>
+            <h3 style="margin-bottom: 30px; text-align: center;">Data Riwayat Peminjaman</h3>
 
             <?php
             include('../alert.php');
@@ -43,7 +43,11 @@
             <?php
             $no=1;
             include('../koneksi.php');
-            $data = mysqli_query($koneksi, "SELECT * from tb_pinjam, tb_ruangan where tb_pinjam.kode_ruangan=tb_ruangan.kode_ruangan");
+            $kode_ruangan = $_GET['kode_ruangan'];
+            $data = mysqli_query($koneksi, "SELECT * from tb_pinjam, tb_ruangan, tb_mahasiswa where
+              tb_pinjam.kode_ruangan=tb_ruangan.kode_ruangan and
+              tb_pinjam.nim_mhs=tb_mahasiswa.nim_mhs and
+              tb_pinjam.kode_ruangan='$kode_ruangan' ");
             while ($d = mysqli_fetch_array($data)) {
              ?>
 

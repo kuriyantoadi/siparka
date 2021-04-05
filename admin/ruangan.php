@@ -60,6 +60,7 @@
                 <?php } ?>
                 <td>
                   <center>
+                    <a class="btn btn-sm btn-secondary" href="ruangan-riwayat.php?kode_ruangan=<?= $d['kode_ruangan'] ?>">Riwayat</a>
                     <a class="btn btn-sm btn-danger" href="ruangan-hapus.php?id_ruangan=<?= $d['id_ruangan'] ?>&kode_ruangan=<?= $d['kode_ruangan'] ?>"
                       onclick="return confirm('Anda yakin Hapus data Ruangan <?php echo $d['nama_ruangan']; ?> ?')">Hapus</a>
                     <a class="btn btn-sm btn-info" href="ruangan-edit.php?id_ruangan=<?= $d['id_ruangan'] ?>">Edit</a>

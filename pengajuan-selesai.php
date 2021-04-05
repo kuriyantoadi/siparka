@@ -25,7 +25,8 @@
 							        <div class="mb-3">
 							          <label class="form-label"><b>Nama Ruangan</label>
 							          <input class="form-control form-control-lg" type="text" name="nama_ruangan" value="<?= $d['nama_ruangan'] ?>" readonly/>
-							        </div>
+												<input class="form-control form-control-lg" type="hidden" name="id_pinjam" value="<?= $d['id_pinjam'] ?>" readonly/>
+										  </div>
 							        <div class="mb-3">
 							          <label class="form-label"><b>Kode Ruangan</label>
 							          <input class="form-control form-control-lg" type="text" name="kode_ruangan" value="<?= $d['kode_ruangan'] ?>" readonly />
@@ -46,7 +47,7 @@
 
 	                      <?php
 												// status peminjaman
-	                      if ("Selesai"  == $d['status_peminjaman']) { ?>
+	                      if ("Diizinkan"  == $d['status_peminjaman']) { ?>
 
 	                        <div class="mb-3">
 	                          <p>Silahkan sampaikan kritik dan saran dari ruangan yang sudah dipinjam</p>
@@ -65,11 +66,9 @@
 	                          <input type="submit" class="btn btn-success btn" value="Simpan">
 	                        </div>
 
-	                      <?php }elseif("Diizinkan"  == $d['status_peminjaman']){  ?>
-	                      <div class="mb-3">
-	                        <p>Terimakasih sudah meminjam ruangan ini, jika sudah selesai melakukan peminjaman silahkan klik selesai.</p>
-	                        <center><a href="pengajuan-surat.php?id_pinjam=<?= $d['id_pinjam'] ?>&nim_mhs=<?= $d['nim_mhs'] ?>" class="btn btn-success">Selesai</a>
-												</div>
+	                      <?php }elseif(""  == $d['status_peminjaman']){  ?>
+
+
 											<?php } // status peminjaman?>
 										<?php } // if kritik ?>
                   <?php } //tampil data mahasiswa ?>

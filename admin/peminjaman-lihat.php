@@ -42,11 +42,11 @@
                          </tr>
                          <tr>
                            <td>Tanggal Peminjaman</td>
-                           <td>: <?= $d['tgl_peminjaman'] ?></td>
+                           <td>: <?= $d['tgl_peminjaman'] ?>,  <?= $d['wkt_peminjaman'] ?></td>
                          </tr>
                          <tr>
                            <td>Tanggal Kembali</td>
-                           <td>: <?= $d['tgl_kembali'] ?></td>
+                           <td>: <?= $d['tgl_kembali'] ?>, <?= $d['wkt_kembali'] ?></td>
                          </tr>
                          <tr>
                            <td>Nama Kegiatan</td>
@@ -80,10 +80,28 @@
                              <br><img src="../img/surat_izin/<?= $d['surat_izin'] ?>" width="50%" class="img-thumbnail img-fluid" alt="photo belum tidak di input">
                            </td>
                          </tr>
+														<?php if ($d['status_peminjaman'] == "Diizinkan") { ?>
+													<tr>
+														<td colspan="2"><center>
+															<a href="peminjaman-diizinkan.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-success" onclick="return confirm('Anda yakin Izinkan pengajuan <?php echo $d['nama_mhs']; ?> ?')">Diizinkan</a>
+															<a href="peminjaman-ditolak.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-danger" onclick="return confirm('Anda yakin tolak pengajuan <?php echo $d['nama_mhs']; ?> ?')">Ditolak</a>
+														</td>
+													</tr>
+														<?php	}elseif ($d['status_peminjaman']){ ?>
+															<tr>
+																<td>Kritik</td>
+																<td>: <?= $d['kritik'] ?></td>
+															</tr>
+															<tr>
+																<td>Saran</td>
+																<td>: <?= $d['saran'] ?></td>
+															</tr>
+
+														<?php	} ?>
                        </table>
+
                        <center>
-                         <a href="peminjaman-diizinkan.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-success">Diizinkan</a>
-                         <a href="peminjaman-ditolak.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-danger" onclick="return confirm('Anda yakin tolak pengajuan <?php echo $d['nama_mhs']; ?> ?')">Ditolak</a>
+
                        <?php } //tampil data mahasiswa ?>
 							      </form>
 									</div>

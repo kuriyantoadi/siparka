@@ -69,7 +69,7 @@
                 <td>
                   <center>
                   <a href="pengajuan-riwayat.php?id_ruangan=<?= $d['id_ruangan'] ?>" class="btn btn-sm  btn-secondary">Riwayat</a>
-                  <?php if ("Menunggu" !=  $d['status_peminjaman']) { ?>
+                  <?php if ("Diizinkan" ==  $d['status_peminjaman']) { ?>
                     <a href="pengajuan-lihat.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-sm btn-info">Lihat</a>
                     <a href="pengajuan-selesai.php?id_pinjam=<?= $d['id_pinjam'] ?>&nim_mhs=<?= $nim_mhs ?>" class="btn btn-sm btn-success">Selesai</a>
                   <?php  } ?>
