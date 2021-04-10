@@ -55,7 +55,7 @@
                 <td><center><?= $d['tgl_kembali'] ?></td>
                 <td><center>
                   <?php
-                  if("Menunggu" ==  $d['status_peminjaman']){
+                  if("Menunggu Konfirmasi" ==  $d['status_peminjaman']){
                     ?>
                     <span class="badge badge-pill bg-secondary">Menunggu</span>
                   <?php }elseif("Tolak" ==  $d['status_peminjaman']){ ?>

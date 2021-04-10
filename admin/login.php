@@ -29,7 +29,9 @@
 							<div class="card-body">
 								<div class="m-sm-4">
 									<div class="text-center">
-										<img src="../img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
+										<a href="../index.php">
+											<img src="../img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
+										</a>
 									</div>
 									<form action="cek-login.php" method="post">
 

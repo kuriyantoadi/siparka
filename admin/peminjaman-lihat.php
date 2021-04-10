@@ -80,7 +80,7 @@
                              <br><img src="../img/surat_izin/<?= $d['surat_izin'] ?>" width="50%" class="img-thumbnail img-fluid" alt="photo belum tidak di input">
                            </td>
                          </tr>
-														<?php if ($d['status_peminjaman'] == "Diizinkan") { ?>
+														<?php if ($d['status_peminjaman'] == "Menunggu Konfirmasi") { ?>
 													<tr>
 														<td colspan="2"><center>
 															<a href="peminjaman-diizinkan.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-success" onclick="return confirm('Anda yakin Izinkan pengajuan <?php echo $d['nama_mhs']; ?> ?')">Diizinkan</a>

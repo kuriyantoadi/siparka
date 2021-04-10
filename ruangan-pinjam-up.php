@@ -89,8 +89,8 @@ $cek_tambah = mysqli_query($koneksi, "INSERT INTO tb_pinjam
     'Menunggu Konfirmasi')");
 
 if ($cek_tambah) {
-    echo "tambah berhasil";
-    // header("location:ruangan-pinjam.php?pesan=pinjam_berhasil&nim_mhs=$nim_mhs&id_ruangan=$id_ruangan");
+    // echo "tambah berhasil";
+    header("location:pengajuan.php");
 } else {
     echo "tambah gagal";
     // header("location:daftar.php?pesan=daftar-gagal");

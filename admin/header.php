@@ -4,6 +4,7 @@ session_start();
 if ($_SESSION['status'] != "aihooCi2") {
     header("location:login.php?pesan=belum_login");
 }
+$username = $_SESSION['username'];
  ?>
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ if ($_SESSION['status'] != "aihooCi2") {
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="profil.php">
               <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profil Saya</span>
             </a>
 					</li>

@@ -65,7 +65,8 @@
                   }else{
                     $data = mysqli_query($koneksi, "SELECT * from tb_pinjam, tb_ruangan, tb_mahasiswa where
                       tb_pinjam.nim_mhs=tb_mahasiswa.nim_mhs and
-                      tb_pinjam.kode_ruangan=tb_ruangan.kode_ruangan
+                      tb_pinjam.kode_ruangan=tb_ruangan.kode_ruangan and
+                      tb_pinjam.status_peminjaman='Diizinkan'
                       ");
             			}
 

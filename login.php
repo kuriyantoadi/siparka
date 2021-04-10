@@ -29,7 +29,9 @@
 							<div class="card-body">
 								<div class="m-sm-4">
 									<div class="text-center">
-										<img src="img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
+										<a href="index.php">
+											<img src="img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
+										</a>
 									</div>
 									<form action="cek-login.php" method="post">
 
@@ -44,7 +46,7 @@
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Masukan kata sandi" required/>
 
 										</div>
-									
+
 										<div class="text-center mt-3">
 											<button type="submit" class="btn btn-lg btn-primary" style="margin-top: 20px">Login</button>
 											<!-- <a class="btn btn-lg btn-success" href="#" style="margin-top: 20px">Daftar</a> -->

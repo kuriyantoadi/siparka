@@ -26,7 +26,9 @@
 					<div class="d-table-cell align-middle">
 
 						<div class="text-center mt-4">
-							<img width="200px" src="img/siparka.png" alt="" style="margin-bottom: 20px">
+							<a href="index.php">
+								<img src="img/siparka.png" alt="" height="80px" style="margin-bottom: 40px">
+							</a>
 							<h3 class="h3" style="margin-bottom: 20px">Pendaftaran Sistem Informasi Peminjaman Ruangan</h3>
 						</div>
 

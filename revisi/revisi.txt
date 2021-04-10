@@ -29,3 +29,17 @@ Mahasiswa
 2. Data peminjaman, Surat peminjaman ruangan => ok
 3. Data peminjaman, selesai (lihat dan selesai) hilang => ok
 4. Tanggal surat pengajuan => ok
+
+07 April 2021
+revisi untuk user mahasiswa :
+1. Pinjam ruangan untuk mahasiswa ada masalah ketika di tekan tombol kirim,
+dan juga jika peminjaman berhasil di tekan langsung halam berpindah ke halaman
+data peminjaman yang dimana dengan status menunggu verifikasi dari admin . => Ok
+2. dasbor mahasiswa masih menginput jadwal yang belum di acc seharusnya yang
+di tampilkan adalah ruangan yang sudah teracc.=> OK
+3.riwayat peminjaman belum ada isinya.
+4.tampilan login pada logo ketika di klik mengarahkan ke tampilan home. => Ok
+
+revisi untuk admin :
+1. tampilan acc peminjaman hilang di data peminjaman.
+2.
