@@ -41,5 +41,5 @@ di tampilkan adalah ruangan yang sudah teracc.=> OK
 4.tampilan login pada logo ketika di klik mengarahkan ke tampilan home. => Ok
 
 revisi untuk admin :
-1. tampilan acc peminjaman hilang di data peminjaman.
+1. tampilan acc peminjaman hilang di data peminjaman. => ok
 2.
