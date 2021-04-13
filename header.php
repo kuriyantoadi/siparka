@@ -33,7 +33,7 @@ $nim_mhs = $_SESSION['nim_mhs'];
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="">
-          <span class="align-middle">Siparka</span>
+          <span class="align-middle">SIPARKA | Mahasiswa</span>
         </a>
 
 				<ul class="sidebar-nav">
@@ -84,7 +84,14 @@ $nim_mhs = $_SESSION['nim_mhs'];
               </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-               <span class="text-dark">Mahasiswa</span>
+              <?php
+              include('koneksi.php');
+              $cek_mhs = mysqli_query($koneksi, "SELECT * from tb_mahasiswa where nim_mhs='$nim_mhs' ");
+              while ($siapa_mhs = mysqli_fetch_array($cek_mhs)) {
+               ?>
+
+               <span class="text-dark"><?= $siapa_mhs['nama_mhs'] ?></span>
+                <?php } ?>
               </a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item" href="logout.php">Log out</a>

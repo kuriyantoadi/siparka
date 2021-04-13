@@ -21,7 +21,7 @@ if ($tgl_peminjaman > $tgl_kembali) {
 }
 
 // tgl pengajuan => db => tgl peminjaman
-$data1  = mysqli_query($koneksi, "SELECT * from tb_pinjam where (kode_ruangan=$kode_ruangan) and (tgl_peminjaman between '$tgl_peminjaman' and '$tgl_kembali')");
+$data1  = mysqli_query($koneksi, "SELECT * from tb_pinjam where (kode_ruangan='$kode_ruangan') and (tgl_peminjaman between '$tgl_peminjaman' and '$tgl_kembali')");
 while ($d = mysqli_fetch_array($data1)) {
  $tgl_pnjm1 =  $d['tgl_kembali'];
 }

@@ -8,7 +8,7 @@
         <div class="card flex-fill w-100">
           <div class="card-header">
 
-            <h3 style="margin-bottom: 30px; text-align: center;">Penggunaan Ruangan</h3>
+            <h3 style="margin-bottom: 30px; text-align: center;">Dashboard Mahasiswa</h3>
 
             <?php
             include('alert.php');

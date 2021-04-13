@@ -20,6 +20,9 @@
                   <center>No
                 </th>
                 <th>
+                  <center>Nama Peminjam
+                </th>
+                <th>
                   <center>Nama Ruangan
                 </th>
                 <th>
@@ -34,9 +37,9 @@
                 <th>
                   <center>Status
                 </th>
-                <th>
+                <!-- <th>
                   <center>Pilihan
-                </th>
+                </th> -->
               </tr>
             </thead>
 
@@ -53,6 +56,7 @@
 
               <tr>
                 <td><center><?= $no++ ?></td>
+                <td><center><?= $d['nama_mhs'] ?></td>
                 <td><center><?= $d['nama_ruangan'] ?></td>
                 <td><center><?= $d['tgl_pengajuan'] ?></td>
                 <td><center><?= $d['tgl_peminjaman'] ?></td>
@@ -74,11 +78,10 @@
 
                   <?php } ?>
                 </td>
-                <td>
+                <!-- <td>
                   <center>
-                  <!-- <a href="peminjaman-riwayat.php?id_ruangan=<?= $d['id_ruangan'] ?>" class="btn btn-sm  btn-secondary">Riwayat</a> -->
                   <a href="peminjaman-lihat.php?id_pinjam=<?= $d['id_pinjam'] ?>" class="btn btn-sm btn-info">Lihat</a>
-                </td>
+                </td> -->
               </tr>
               <?php } ?>
             </table>
