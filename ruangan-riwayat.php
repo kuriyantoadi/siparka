@@ -7,8 +7,13 @@
       <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
         <div class="card flex-fill w-100">
           <div class="card-header">
-
-            <h3 style="margin-bottom: 30px; text-align: center;">Data Riwayat Peminjaman</h3>
+          <?php
+          $kode_ruangan = $_GET['kode_ruangan'];
+          $cek_ruangan = mysqli_query($koneksi, "SELECT * from tb_ruangan where kode_ruangan='$kode_ruangan' ");
+          while ($lihat_ruangan = mysqli_fetch_array($cek_ruangan)) {
+           ?>
+            <h3 style="margin-bottom: 30px; text-align: center;">Riwayat Peminjaman Ruangan <?= $lihat_ruangan['nama_ruangan'] ?> </h3>
+          <?php  } ?>
 
             <?php
             include('alert.php');
@@ -46,7 +51,6 @@
             <?php
             $no=1;
             include('koneksi.php');
-            $kode_ruangan = $_GET['kode_ruangan'];
             $data = mysqli_query($koneksi, "SELECT * from tb_pinjam, tb_ruangan, tb_mahasiswa where
               tb_pinjam.kode_ruangan=tb_ruangan.kode_ruangan and
               tb_pinjam.nim_mhs=tb_mahasiswa.nim_mhs and
