@@ -87,7 +87,7 @@
 										<div class="mb-3">
 											<label class="form-label"><b>Upload Kartu Tanda Mahasiswa</label>
 											<input class="form-control" type="file" name="ktm" required/>
-											<div class="form-text">File berformat pdf dan maksimal ukuran 1 MB</div>
+											<div class="form-text">File berformat JPG, PNG, JPEG dan maksimal ukuran 1 MB</div>
 										</div>
 										<div class="text-center mt-3">
 											<input type="submit" class="btn btn-primary btn" value="Daftar" name="upload">

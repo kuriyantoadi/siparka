@@ -33,7 +33,7 @@ $username = $_SESSION['username'];
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
+				<a class="sidebar-brand" href="index.php">
           <span class="align-middle">Siparka</span>
         </a>
 

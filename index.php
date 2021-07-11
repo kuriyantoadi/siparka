@@ -96,6 +96,7 @@
     <section class="syarat" id="syarat">
     <div class="container">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
+
             <li class="nav-item" role="presentation">
                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16">
@@ -105,6 +106,7 @@
                  </svg> Syarat dan Ketentuan
                </a>
             </li>
+
             <li class="nav-item" role="presentation">
                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost-split" viewBox="0 0 16 16">
@@ -112,7 +114,29 @@
                  </svg> Alur Peminjaman
                </a>
             </li>
+
+            <li class="nav-item" role="presentation">
+               <a class="nav-link" id="peminjaman-tab" data-toggle="tab" href="#peminjaman" role="tab" aria-controls="profile" aria-selected="false">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                  <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                  </svg> Jadwal Peminjaman</i>
+              </a>
+
+            </li>
+
+
+            <li class="nav-item" role="presentation">
+               <a class="nav-link" id="panduan-tab" data-toggle="tab" href="#panduan" role="tab" aria-controls="profile" aria-selected="false">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.3881.009.94z"/>
+                  </svg> Panduan
+               </a>
+            </li>
+
         </ul>
+
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <ol class="bg-white"><br>
@@ -128,6 +152,7 @@
                     </div>
                 </ol>
             </div>
+
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <ol class="bg-white"><br>
                     <li>Login pada aplikasi website SIPARKA (Sistem Informasi Peminjaman Ruangan FKIP UNTIRTA);</li><br>
@@ -142,7 +167,30 @@
                     </div>
                 </ol>
             </div>
+
+            <div class="tab-pane fade" id="peminjaman" role="tabpanel" aria-labelledby="peminjaman-tab">
+                <div style="padding: 30px;background-color: white;">
+                  <?php include 'jadwal-peminjaman.php' ?>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="panduan" role="tabpanel" aria-labelledby="panduan-tab">
+                <ol class="bg-white"><br>
+                    <li>Login pada aplikasi website SIPARKA (Sistem Informasi Peminjaman Ruangan FKIP UNTIRTA);</li><br>
+                    <li>Peminjam mengajukan dan mengisi form peminjaman;</li><br>
+                    <li>Selanjutnya menunggu verifikasi form pengajuan peminjaman oleh petugas kasubbag umum dan perlengkapan;</li><br>
+                    <li>Setelah di verifikasi, peminjam menyerahkan bukti surat peminjaman lalu bukti tersebut di tanda tangani serta di stempel basah oleh petugas kasubbag umum dan perlengkapan;</li>
+                    <br>
+                    <li>Apabila surat sudah di beri tanda tangan dan stempel basah, maka peminjam berhak mendapatkan akses peminjaman yang di kelola oleh penanggung jawab ruangan atau petugas keamanan;</li><br><br>
+                    <div  class="alur container text-center" >
+                      <a href="http://www.freepik.com"><img src="asset/images/Alur.png" width="900"></a>
+                      <p><br><br></p>
+                    </div>
+                </ol>
+            </div>
         </div>
+
     </div>
     </section>
     <!-- Akhir Syarat dan ketetntuan -->

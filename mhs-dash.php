@@ -13,17 +13,6 @@
             <?php
             include('alert.php');
              ?>
-<!--
-             <div class="row">
-               <div class="col-9">
-               </div>
-               <div class="col-3">
-                   <form class="" action="index.php" method="get">
-                     <input type="text" name="tanggal" class="form-control datepicker" placeholder="Tanggal Peminjaman" required />
-                     <input type="submit" class="btn btn-primary btn-sm" value="Cari">
-                 </form>
-                  </div>
-               </div> -->
 
 
             <table class="table table-bordered table-hover" id="example">
