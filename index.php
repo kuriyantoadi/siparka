@@ -171,23 +171,15 @@
             <div class="tab-pane fade" id="peminjaman" role="tabpanel" aria-labelledby="peminjaman-tab">
                 <div style="padding: 30px;background-color: white;">
                   <?php include 'jadwal-peminjaman.php' ?>
-
                 </div>
+
             </div>
 
             <div class="tab-pane fade" id="panduan" role="tabpanel" aria-labelledby="panduan-tab">
-                <ol class="bg-white"><br>
-                    <li>Login pada aplikasi website SIPARKA (Sistem Informasi Peminjaman Ruangan FKIP UNTIRTA);</li><br>
-                    <li>Peminjam mengajukan dan mengisi form peminjaman;</li><br>
-                    <li>Selanjutnya menunggu verifikasi form pengajuan peminjaman oleh petugas kasubbag umum dan perlengkapan;</li><br>
-                    <li>Setelah di verifikasi, peminjam menyerahkan bukti surat peminjaman lalu bukti tersebut di tanda tangani serta di stempel basah oleh petugas kasubbag umum dan perlengkapan;</li>
-                    <br>
-                    <li>Apabila surat sudah di beri tanda tangan dan stempel basah, maka peminjam berhak mendapatkan akses peminjaman yang di kelola oleh penanggung jawab ruangan atau petugas keamanan;</li><br><br>
-                    <div  class="alur container text-center" >
-                      <a href="http://www.freepik.com"><img src="asset/images/Alur.png" width="900"></a>
-                      <p><br><br></p>
-                    </div>
-                </ol>
+              <div style="padding: 30px;background-color: white;">
+                <p>Untuk lebih lengkap dalam pengguna website SIPARKA bisa anda download panduan berikut
+                  <a class="btn btn-success btn-sm" href="https://siparka.com/asset/Panduan%20Pengunaan%20Website%20Siparka.pdf">Download Panduan</a>
+                </p>
             </div>
         </div>
 
